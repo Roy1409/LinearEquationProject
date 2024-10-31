@@ -1,35 +1,13 @@
 import java.util.Scanner;
 
-
-
-
-
-
-
-
 public class LinearEquationLogic {
-
-
-
-
     private Scanner Scan = new Scanner(System.in);
     private LinearEquation coord = new LinearEquation(0, 0, 0, 0);
 
-
-
-
     public LinearEquationLogic() {
-
-
-
-
     }
 
-
-
-
     public  void  start() {
-
 
         System.out.println("Welcome to the linear equation calculator!");
         main();
@@ -41,7 +19,6 @@ public class LinearEquationLogic {
         if (answer.equals("y")) {
             main();
         } }
-
 
     public void main() {
         System.out.print("Enter coordinate 1: ");
