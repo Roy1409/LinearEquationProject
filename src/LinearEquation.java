@@ -22,16 +22,18 @@ public class LinearEquation {
 
     public double yIntercept() {
         double slope = slope() * -x1;
-        double rounded=slope + y1;
-        double round=Math.round(rounded*100);
-        return round/100;
+        return roundedToHundredth(slope + y1);
+
     }
 
     public double slope() {
         double x = x2-x1;
         double y = y2-y1;
-        double rounded=y/x;
-        return (double) Math.round(rounded * 100.0) /100;
+        return roundedToHundredth(y/x);
+    }
+
+    private double roundedToHundredth(double round) {
+        return (double) Math.round(round * 100.0) /100;
     }
 
     public String equation() {
@@ -92,8 +94,7 @@ public class LinearEquation {
     }
     public String lineInfo() {
         if (x1==x2) {
-            return "The points are on a vertical line: x = "+x1; }
+            return "These points are on a vertical line: x = "+x1; }
         return "The two point are: ("+x1+", "+y1+")"+ " and"+" ("+x2+", "+y2+")"+"\n"+"The equation of the line between these points is: "+equation()+"\n"+"The slope of this line is: "+slope()+"\n"+"The y-intercept of this line is: " + yIntercept()+"\n" +"The distance between these points is "+distance();
     }
 }
-
